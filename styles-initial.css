@@ -1,0 +1,143 @@
+:root {
+  --clr-moderate-violet: 263 55% 52%;     /* primary */
+  --clr-dark-grayish-blue: 217 19% 35%;   /* secondary */
+  --clr-dark-blackish-blue: 219 29% 14%;  /* secondary */
+  --clr-White: 0 0% 100%;                 /* neutral 1 */
+  --clr-Light-gray: 210 46% 95%;          /* neutral 2*/
+  --clr-Light-grayish-blue: 0 0% 81%;     /* neutral 3*/
+
+  --clr-background: 213 44% 95%;
+  --clr-red: 337 96% 40%;
+
+  --ff-primary: "Barlow Semi Condensed", sans-serif;
+
+  --fw-400: 500;
+  --fw-700: 600;
+
+  --fs-11: 0.6875rem;
+  --fs-13: 0.8125rem;
+  --fs-20: 1.25rem;
+}
+
+*{
+  margin: 0;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-400);
+  background-color: hsl(var(--clr-Light-gray));
+
+  line-height: 1.5;
+}
+
+h1, h2{
+  font-weight: var(--fw-700);
+}
+
+
+.main-container{
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+/**************Set background color of each review card *******************/
+.bg-moderate-violet{
+  background-color: hsl(var(--clr-moderate-violet));
+}
+
+.bg-dark-grayish-blue{
+  background-color: hsl(var(--clr-dark-grayish-blue));
+}
+
+.bg-white{
+  background-color: hsl(var(--clr-White));
+}
+
+.bg-dark-blackish-blue{
+  background-color: hsl(var(--clr-dark-blackish-blue));
+}
+
+/********************style text colors for each card********************/
+.txt-clr-white{
+  color: hsl(var(--clr-White));
+}
+
+.txt-clr-dark-grayish-blue{
+  color: hsl(var(--clr-dark-grayish-blue));
+}
+
+/*****************style review cards/components**********************/
+.testimonial-section{
+  width: min(90%, 70rem); /* no wider than 70rem, shrink to fit 95% of containing block's width if the container is smaller */
+  margin-inline: auto;
+  padding-block: 1.875rem;
+}
+
+.item{
+  padding: 1.875rem;
+  border-radius: 0.625rem;
+}
+
+/* style profile to get images and profile info side by side */
+.profile{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* style image to desired styling */
+.profile img{
+  width: 2rem;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.name{
+  font-size: var(--fs-13);
+  font-weight: var(--fw-400);
+} 
+
+.title{
+  font-size: var(--fs-11);
+  opacity: 0.5;
+}
+
+.review-heading{
+  font-size: var(--fs-20);
+}
+
+.review-paragraph{
+  opacity: 0.7;
+}
+
+/**** include quotation image to the background of card 1 *****/
+.testimonial-1{
+  background-image: url(images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 20%;
+}
+
+/**** give image 1 and 4 a border color ***/
+.testimonial-1 .profile img, 
+.testimonial-4 .profile img {
+  border: 3px solid #7c5fb9;
+}
+
+/****** attribution ******/
+.attribution { font-size: 11px; 
+text-align: center; 
+}
+.attribution a { 
+color: hsl(228, 45%, 44%); 
+}
+
+
